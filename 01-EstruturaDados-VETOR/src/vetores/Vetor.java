@@ -40,7 +40,7 @@ public class Vetor {
 
 	public String toString() {
 		StringBuilder s = new StringBuilder();
-		
+
 		s.append("[");
 
 		for (int i = 0; i < this.tamanho - 1; i++) {
@@ -55,6 +55,14 @@ public class Vetor {
 		s.append("]");
 
 		return s.toString();
+	}
+
+	public String busca(int posicao) {
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		return this.elementos[posicao];
+
 	}
 
 }
