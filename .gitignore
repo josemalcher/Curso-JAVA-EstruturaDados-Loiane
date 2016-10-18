@@ -2,6 +2,10 @@
 .recommenders
 RemoteSystemsTempFiles/
 
+01-EstruturaDados-VETOR/bin
+01-EstruturaDados-VETOR/.settings
+01-EstruturaDados-VETOR/.classpath
+01-EstruturaDados-VETOR/.project
 
 #bin
 #.settings
