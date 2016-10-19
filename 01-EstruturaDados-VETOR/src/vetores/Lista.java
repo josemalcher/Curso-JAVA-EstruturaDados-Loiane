@@ -98,6 +98,19 @@ public class Lista<T> {
 		}
 		return -1; // posição que não existe no vetor
 	}
+	// Melhoria - Exercício 01
+	public boolean contem(T elemento) {
+		/*int pos = busca(elemento);
+		if(pos > -1){
+			return true;
+		}
+		return false;*/
+		
+		
+		return busca(elemento) > -1; // >=0
+	}
+	
+	
 
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
