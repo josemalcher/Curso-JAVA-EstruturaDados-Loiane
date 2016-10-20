@@ -82,7 +82,12 @@ public class Lista<T> {
 		return s.toString();
 	}
 
-	public Object busca(int posicao) {
+	//Exerc 04
+	public T obtem(int posicao){
+		return this.busca(posicao);
+	}
+	//Pequeno ajuste de Object para T
+	public T busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
 		}
