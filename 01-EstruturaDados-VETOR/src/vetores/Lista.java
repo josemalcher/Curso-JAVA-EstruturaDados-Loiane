@@ -144,4 +144,13 @@ public class Lista<T> {
 		}
 		this.tamanho--;
 	}
+	
+	//Exerc 03
+	public void remove(T elemento) {
+						//Reutilizando metodo busca
+		int posi = this.busca(elemento);
+		if(posi > -1){
+			this.remove(posi);
+		}
+	}
 }
