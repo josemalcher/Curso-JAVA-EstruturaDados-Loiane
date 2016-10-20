@@ -8,9 +8,10 @@ public class Lista<T> {
 	private int tamanho = 0;
 
 	public Lista(int capacidade) {
-		this.elementos = (T[]) new Object[capacidade]; //solução elegante
+		this.elementos = (T[]) new Object[capacidade]; // solução elegante
 		this.tamanho = 0;
 	}
+
 	public Lista(int capacidade, Class<T> tipoClasse) {
 		this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
 		this.tamanho = 0;
@@ -98,23 +99,30 @@ public class Lista<T> {
 		}
 		return -1; // posição que não existe no vetor
 	}
+
+	// Adição método Exerc 02
+	public int ultimoIndice(T elemento) {
+		//começar a contar de trás para frente
+		for (int i = this.tamanho -1 ; i >= 0; i--) {
+			if (this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
 	// Melhoria - Exercício 01
 	public boolean contem(T elemento) {
-		/*int pos = busca(elemento);
-		if(pos > -1){
-			return true;
-		}
-		return false;*/
-		
-		
+		/*
+		 * int pos = busca(elemento); if(pos > -1){ return true; } return false;
+		 */
+
 		return busca(elemento) > -1; // >=0
 	}
-	
-	
 
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
-			T[] elementosNovos = (T[])new Object[this.elementos.length * 2];
+			T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
 				elementosNovos[i] = this.elementos[i];
 			}
