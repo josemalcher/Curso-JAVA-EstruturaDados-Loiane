@@ -7,6 +7,11 @@ RemoteSystemsTempFiles/
 01-EstruturaDados-VETOR/.classpath
 01-EstruturaDados-VETOR/.project
 
+02-PILHAS/bin
+02-PILHAS/.settings
+02-PILHAS/.classpath
+02-PILHAS/.project
+
 #bin
 #.settings
 #.classpath
