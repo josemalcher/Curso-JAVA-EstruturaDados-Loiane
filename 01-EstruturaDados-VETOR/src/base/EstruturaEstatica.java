@@ -14,9 +14,10 @@ public class EstruturaEstatica<T> {
 	public EstruturaEstatica() {
 		this(10);
 	}
-
-	private void aumentaCapacidade() {
+	@SuppressWarnings("unchecked")
+	protected void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
+			
 			T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
 				elementosNovos[i] = this.elementos[i];
