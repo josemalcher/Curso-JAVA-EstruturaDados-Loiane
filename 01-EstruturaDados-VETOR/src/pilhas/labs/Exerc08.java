@@ -1,5 +1,6 @@
 package pilhas.labs;
-
+//https://github.com/loiane/estrutura-dados-algoritmos-java/blob/master/src/com/loiane/estruturadados/pilha/labs/Exer08.java
+//https://www.youtube.com/watch?v=nx_Gf8OPrac
 import java.util.Stack;
 
 public class Exerc08 {
