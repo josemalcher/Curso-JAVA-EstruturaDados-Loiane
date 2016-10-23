@@ -31,6 +31,28 @@ public class Fila<T> extends EstruturaEstatica<T>{
 		return this.elementos[0];
 	}
 	
+	//Aula 22
+	public T desenfileirar(){
+		
+		final int POS = 0;
+		
+		if(this.estaVazia()){
+			return null;
+		}
+		
+		T elementoASerRemovido = this.elementos[POS];
+		
+		/*for (int i = POS; i < tamanho - 1; i++) {
+			elementos[i] = elementos[i+1];
+		}
+		tamanho--;*/
+		this.remove(POS); //reaproveitando codigo
+		
+		return elementoASerRemovido;
+		
+	}
+	
+	
 	
 
 	
