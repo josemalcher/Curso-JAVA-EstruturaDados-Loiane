@@ -20,6 +20,16 @@ public class Fila<T> extends EstruturaEstatica<T>{
 		
 		this.adiciona(elemento); //reutilizando código do pai
 	}
+
+	//Aula 21 
+	public T espiar(){
+		
+		if(this.estaVazia()){
+			return null;
+		}
+		
+		return this.elementos[0];
+	}
 	
 	
 
