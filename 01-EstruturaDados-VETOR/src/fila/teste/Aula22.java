@@ -19,10 +19,10 @@ public class Aula22 {
 
 		System.out.println(fila.espiar());
 
-		System.out.println(fila.desenfileirar());
+		System.out.println(fila.desenfileira());
 
 		System.out.println(fila.toString());
-		System.out.println(fila.desenfileirar());
+		System.out.println(fila.desenfileira());
 
 		System.out.println(fila.toString());
 
