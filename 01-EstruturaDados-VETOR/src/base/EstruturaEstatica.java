@@ -48,7 +48,7 @@ public class EstruturaEstatica<T> {
 		}
 	}
 
-	protected boolean adiciona(int posicao, T elemento) {
+	/*protected boolean adiciona(int posicao, T elemento) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
 			// return false
@@ -57,6 +57,24 @@ public class EstruturaEstatica<T> {
 
 		for (int i = this.tamanho - 1; i >= posicao; i--) {
 			this.elementos[i + 1] = this.elementos[i];
+		}
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+
+		return true;
+	}*/
+	//Codigo da Loiane
+	protected boolean adiciona(int posicao, T elemento){
+
+		if (posicao < 0 || posicao > tamanho){
+			throw new IllegalArgumentException("Posição inválida");
+		}
+
+		this.aumentaCapacidade();
+
+		//mover todos os elementos
+		for (int i=this.tamanho-1; i>=posicao; i--){
+			this.elementos[i+1] = this.elementos[i];
 		}
 		this.elementos[posicao] = elemento;
 		this.tamanho++;
